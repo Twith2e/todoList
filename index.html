@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="body-wrapper" id="body-wrapper">
+      <div class="header-wrapper">
+        <h2 class="header">TO DO LIST</h2>
+      </div>
+      <div class="input-wrapper-add-btn-wrapper">
+        <div class="input-wrapper">
+          <input
+            autocomplete="off"
+            autofocus
+            id="to-do-input"
+            placeholder="Make a list"
+            type="text"
+          />
+        </div>
+        <div class="add-btn">
+          <button onclick="updateList()">
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+      <div class="list-wrapper">
+        <div id="todo-list"></div>
+      </div>
+    </div>
+  </body>
+</html>
