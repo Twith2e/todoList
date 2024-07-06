@@ -11,18 +11,32 @@ body {
   width: 100%;
 }
 
+li {
+  border-bottom: 1px solid brown;
+  list-style: none;
+}
+
+h2 {
+  border-bottom: 1px solid brown;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
 .body-wrapper {
-  align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 149);
   border-radius: 10px;
+  color: black;
   display: flex;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   flex-direction: column;
   gap: 30px;
-  height: 85%;
+  height: fit-content;
   margin: auto;
-  padding-top: 20px;
+  padding: 20px;
   width: 30%;
 }
 
@@ -35,29 +49,63 @@ body {
 .input-wrapper input {
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid rgb(39, 39, 67);
+  border-bottom: 1px solid black;
   font-size: 18px;
   outline: none;
   padding: 10px 20px 0 0;
-  width: 90%;
+  width: 100%;
 }
 
-.add-btn span {
-  font-size: 40px;
-}
-
-.input-wrapper-add-btn-wrapper {
+.input-wrapper-add-btn-wrapper,
+.input-wrapper-edit-btn-wrapper {
   align-items: end;
   display: flex;
   gap: 20px;
 }
 
-.input-wrapper-add-btn-wrapper button {
+.input-wrapper-edit-btn-wrapper {
+  display: none;
+}
+
+.item {
   align-items: center;
-  background-color: rgb(110, 182, 110);
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: inline-flex;
+  gap: 10px;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#todoInput {
+  background-color: rgba(92, 154, 199, 0.256);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn,
+.update-btn {
+  align-items: center;
+  background: transparent;
   border: none;
   border-radius: 50%;
-  color: green;
   cursor: pointer;
   display: inline-flex;
   font-size: 16px;
@@ -66,34 +114,28 @@ body {
   width: 2em;
 }
 
-.list {
-  display: flex;
-  gap: 20px;
-}
-
-#todo-list {
-  align-items: center;
-  gap: 40px;
-  margin: 0;
-}
-
-.buttons {
-  display: inline-flex;
-  gap: 10px;
-}
-
-li {
-  list-style: none;
-}
-
-.edit-btn,
-.delete-btn {
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 8px 12px;
+.delete-btn:hover {
+  background-color: rgba(255, 0, 0, 0.303);
 }
 
 .delete-btn {
-  background-color: rgb(174, 88, 88);
+  color: red;
+}
+
+.edit-btn:hover {
+  background-color: rgba(63, 159, 203, 0.303);
+}
+
+#edit-icon {
+  color: rgb(63, 159, 203);
+  font-size: 22px;
+}
+
+.update-btn {
+  background-color: rgb(51, 107, 51);
+  color: white;
+}
+
+.update-btn:active {
+  background-color: rgb(139, 183, 139);
 }
