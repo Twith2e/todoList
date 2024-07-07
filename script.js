@@ -5,7 +5,9 @@ let globalIndex = "";
 let taskDatabase = JSON.parse(localStorage.getItem("list")) || [];
 
 taskDatabase.forEach((list, index) => {
-  listOutput.innerHTML += `<li class='task'>${list}<div class="action-btn"><button onclick="editTask(${index})" class="edit-btn" value="">
+  listOutput.innerHTML += `<li class='task'>${
+    index + 1
+  }.  ${list}<div class="action-btn"><button onclick="editTask(${index})" class="edit-btn" value="">
   <span class="material-symbols-outlined" id="edit-icon">edit</span></button><button class="delete-btn" value="" onclick="deleteTask(${index})">
   <span class="material-symbols-outlined" id="delete-icon">delete</span></button></div></li>`;
 });
@@ -16,7 +18,9 @@ function addList() {
     localStorage.setItem("list", JSON.stringify(taskDatabase));
     listOutput.innerHTML = "";
     taskDatabase.forEach((list, index) => {
-      listOutput.innerHTML += `<li class="task">${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
+      listOutput.innerHTML += `<li class="task">${
+        index + 1
+      }. ${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
       <span class="material-symbols-outlined" id="edit-icon">edit</span></button><button class="delete-btn" value="" onclick="deleteTask(${index})">
       <span class="material-symbols-outlined" id="delete-icon">delete</span></button></div></li>`;
     });
@@ -38,7 +42,9 @@ function editList() {
   localStorage.setItem("list", JSON.stringify(taskDatabase));
   listOutput.innerHTML = "";
   taskDatabase.forEach((list, index) => {
-    listOutput.innerHTML += `<li class="task">${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
+    listOutput.innerHTML += `<li class="task">${
+      index + 1
+    }. ${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
       <span class="material-symbols-outlined" id="edit-icon">edit</span></button><button class="delete-btn" value="" onclick="deleteTask(${index})">
       <span class="material-symbols-outlined" id="delete-icon">delete</span></button></div></li>`;
   });
@@ -51,7 +57,9 @@ function deleteTask(index) {
   localStorage.setItem("list", JSON.stringify(taskDatabase));
   listOutput.innerHTML = "";
   taskDatabase.forEach((list, index) => {
-    listOutput.innerHTML += `<li class="task">${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
+    listOutput.innerHTML += `<li class="task">${
+      index + 1
+    }. ${list}<div class="action-btn"><button class="edit-btn" onclick="editTask(${index})" value="">
       <span class="material-symbols-outlined" id="edit-icon">edit</span></button><button class="delete-btn" value="" onclick="deleteTask(${index})">
       <span class="material-symbols-outlined" id="delete-icon">delete</span></button></div></li>`;
   });

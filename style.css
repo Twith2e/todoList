@@ -7,7 +7,7 @@
 body {
   background-color: black;
   height: 100vh;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   width: 100%;
 }
 
@@ -25,6 +25,15 @@ button {
   border: none;
 }
 
+main {
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+}
+
 .body-wrapper {
   background-color: rgb(255, 255, 149);
   border-radius: 10px;
@@ -34,10 +43,10 @@ button {
   font-size: 20px;
   flex-direction: column;
   gap: 30px;
-  height: fit-content;
+  height: 100%;
   margin: auto;
   padding: 20px;
-  width: 30%;
+  width: 70%;
 }
 
 .input-wrapper {
@@ -83,6 +92,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height: 90%;
+  overflow: scroll;
 }
 
 #todoInput {
@@ -92,6 +103,7 @@ button {
 .task {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .action-btn {
@@ -138,4 +150,17 @@ button {
 
 .update-btn:active {
   background-color: rgb(139, 183, 139);
+}
+
+@media (max-width: 390px) {
+  main {
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  .body-wrapper {
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+  }
 }
